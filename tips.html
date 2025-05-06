@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Eco Tips</title>
+  <link rel="stylesheet" href="style3.css">
+  <script src="script3.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+      color: #2e7d32;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+
+  
+
+
+    .eco-tips-container {
+      background: #ffffff;
+      border: 2px solid #a5d6a7;
+      border-radius: 16px;
+      padding: 30px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eco-tips-container h2 {
+      margin-bottom: 10px;
+      color: #1b5e20;
+      font-size: 1.8em;
+    }
+
+    .eco-tip {
+      font-size: 1.3em;
+      margin: 25px 0;
+      min-height: 40px;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    .eco-tip.show {
+      opacity: 1;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #66bb6a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #43a047;
+    }
+
+    /* Animated leaves */
+    .leaf {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://cdn-icons-png.flaticon.com/512/2909/2909592.png') no-repeat center/contain;
+      animation: floatLeaf linear infinite;
+      opacity: 0.4;
+    }
+
+    @keyframes floatLeaf {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Multiple leaves with delay */
+    .leaf:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+    .leaf:nth-child(2) { left: 30%; animation-duration: 15s; animation-delay: 2s; }
+    .leaf:nth-child(3) { left: 50%; animation-duration: 18s; animation-delay: 4s; }
+    .leaf:nth-child(4) { left: 70%; animation-duration: 14s; animation-delay: 6s; }
+    .leaf:nth-child(5) { left: 90%; animation-duration: 20s; animation-delay: 1s; }
+  </style>
+</head>
+<body>
+
+<!-- Floating animated leaves -->
+<section>
+   <div class="leaves">
+       <div><img src="png1-effect1.png" alt=""></div>
+       <div><img src="png2-effect2.png" alt=""></div>
+       <div><img src="png3-effect3.png" alt=""></div>
+       <div><img src="png4-effect4.png" alt=""></div>
+       <div><img src="png1-effect1.png" alt=""></div>
+       <div><img src="png2-effect2.png" alt=""></div>
+       <div><img src="png3-effect3.png" alt=""></div>
+       <div><img src="png4-effect4.png" alt=""></div>
+   </div>
+   <div class="leaves set2">
+       <div><img src="png1-effect1.png" alt=""></div>
+       <div><img src="png2-effect2.png" alt=""></div>
+       <div><img src="png3-effect3.png" alt=""></div>
+       <div><img src="png4-effect4.png" alt=""></div>
+       <div><img src="png1-effect1.png" alt=""></div>
+       <div><img src="png2-effect2.png" alt=""></div>
+       <div><img src="png3-effect3.png" alt=""></div>
+       <div><img src="png4-effect4.png" alt=""></div>
+   </div>
+   <div class="leaves set3">
+       <div><img src="png1-effect1.png" alt=""></div>
+       <div><img src="png2-effect2.png" alt=""></div>
+       <div><img src="png3-effect3.png" alt=""></div>
+       <div><img src="png4-effect4.png" alt=""></div>
+       <div><img src="png1-effect1.png" alt=""></div>
+       <div><img src="png2-effect2.png" alt=""></div>
+       <div><img src="png3-effect3.png" alt=""></div>
+       <div><img src="png4-effect4.png" alt=""></div>
+   </div>
+</section>
+
+<div class="eco-tips-container">
+  <h2>🌱 AI Eco Tips</h2>
+  <p>Get practical advice on reducing emissions, saving energy, and living green.</p>
+  <div class="eco-tip" id="ecoTip"></div>
+  <button onclick="generateTip()">Get New Tip</button>
+</div>
+
+<script>
+  const tips = [
+    "Turn off lights when leaving a room to save electricity.",
+    "Unplug devices when not in use to reduce phantom energy.",
+    "Use public transport or cycle instead of driving.",
+    "Recycle plastic, paper, and glass to reduce landfill waste.",
+    "Install energy-efficient LED bulbs at home.",
+    "Collect rainwater for gardening purposes.",
+    "Switch to reusable bags instead of plastic ones.",
+    "Reduce meat consumption to lower your carbon footprint.",
+    "Plant a tree in your community.",
+    "Wash clothes in cold water to save energy."
+  ];
+
+  const tipElement = document.getElementById('ecoTip');
+
+  function generateTip() {
+    const randomTip = tips[Math.floor(Math.random() * tips.length)];
+    tipElement.classList.remove('show');
+    setTimeout(() => {
+      tipElement.textContent = randomTip;
+      tipElement.classList.add('show');
+    }, 200);
+  }
+</script>
+
+</body>
+</html>

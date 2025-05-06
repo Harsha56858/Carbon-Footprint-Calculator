@@ -1,0 +1,458 @@
+/* Dark Mode Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d; /* Dark background */
+    color: #e0f7fa;
+  }
+  
+  section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: transparent;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #76ff03; /* Bright green for headings */
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #b2ff59; /* Soft green for body text */
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #1de9b6;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 170, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #00bfa5;
+    color: #fff;
+  }
+  
+  /* Video Section with Light Strip Animation */
+  #video {
+    position: relative;
+    background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+    border-radius: 24px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 0 30px rgba(0, 255, 170, 0.2);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+  }
+  
+  /* Glowing Light Strip Animation */
+  #video::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(270deg, #00ffc3, #00e5ff, #00ffc3);
+    background-size: 600% 600%;
+    border-radius: 26px;
+    z-index: 1;
+    animation: moveGlow 6s linear infinite;
+    filter: blur(8px);
+  }
+  
+  #video video {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  #video video:hover {
+    transform: scale(1.01);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes moveGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #video {
+      padding: 40px 15px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #video {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+    border-radius: 24px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 100, 0, 0.1);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+  }
+  
+  #video h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  #video p {
+    font-size: 1.1rem;
+    color: #388e3c;
+    margin-bottom: 20px;
+  }
+  
+  #video video {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  #video video:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Optional responsive tweak for smaller devices */
+  @media (max-width: 600px) {
+    #video {
+      padding: 40px 15px;
+    }
+  
+    #video h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #2e7d32;
+  }
+  
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2e7d32;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #4caf50;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #66bb6a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Video Section Styles */
+  #video {
+    background: linear-gradient(135deg, #e0f7fa, #d0f8ce);
+    border-radius: 24px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 100, 0, 0.1);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #video::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(102, 187, 106, 0.2), transparent 70%);
+    border-radius: 32px;
+    z-index: -1;
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+  
+  #video video {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  #video video:hover {
+    transform: scale(1.01);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(102, 187, 106, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 35px rgba(102, 187, 106, 0.4);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    #video {
+      padding: 40px 15px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  
+
+
+/* Tip box effect */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b2d24; /* Dark eco-friendly green */
+    color: #e0f7fa;
+  }
+  
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #a5d6a7;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #c8e6c9;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #66bb6a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Video Section Styles */
+  #video {
+    background: linear-gradient(135deg, #263d2c, #355b3c);
+    border-radius: 24px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 100, 0, 0.3);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  #video::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 28px;
+    background: linear-gradient(90deg, #00ff99, #00ccff, #00ff99);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: moveGlow 6s linear infinite;
+    filter: blur(4px);
+  }
+  
+  #video video {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+  }
+  
+  #video video:hover {
+    transform: scale(1.01);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes moveGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    #video {
+      padding: 40px 15px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  
